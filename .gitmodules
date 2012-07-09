@@ -3,4 +3,7 @@
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
-	url = http://bitbucket.org/ns9tks/vim-fuzzyfinder.git
+	url = http://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/l9"]
+	path = bundle/l9
+	url = http://github.com/vim-scripts/L9.git

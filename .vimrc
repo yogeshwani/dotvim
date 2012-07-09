@@ -1,3 +1,5 @@
+call pathogen#infect()
+syntax on
 set nocompatible
 set nobackup
 set nowritebackup
@@ -23,8 +25,6 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 filetype plugin indent on
 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 "let Tlist_Show_Menu=1
 
