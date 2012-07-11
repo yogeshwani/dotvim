@@ -5,6 +5,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set title
 set nowrap
 set tabstop=4
 set shiftwidth=4
