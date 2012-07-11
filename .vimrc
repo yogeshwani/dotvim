@@ -24,7 +24,8 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 filetype plugin indent on
-
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'clang_complete'
 
 "let Tlist_Show_Menu=1
 
