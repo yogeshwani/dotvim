@@ -12,7 +12,7 @@ git add .
 git commit -m "Install Fugitive.vim bundle as a submodule."
 
 cd ~
-git clone http://github.com/username/dotvim.git ~/.vim
+git clone http://github.com/davidpine/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim

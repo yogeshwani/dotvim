@@ -1,3 +1,11 @@
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = []
+
+if v:version < '702'
+    call add(g:pathogen_disabled, 'fuzzyfinder')
+    call add(g:pathogen_disabled, 'l9')
+    call add(g:pathogen_disabled, 'clang-complete')
+endif
 call pathogen#infect()
 syntax on
 set nocompatible
@@ -25,8 +33,8 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 filetype plugin indent on
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'clang_complete'
+"let g:clang_snippets = 1
+"let g:clang_snippets_engine = 'clang_complete'
 
 "let Tlist_Show_Menu=1
 
@@ -41,4 +49,3 @@ let g:clang_snippets_engine = 'clang_complete'
 "let g:miniBufExplMapWindowNavArrows = 1 
 "let g:miniBufExplMapCTabSwitchBufs = 1 
 "let g:miniBufExplModSelTarget = 1 
-
