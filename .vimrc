@@ -1,11 +1,11 @@
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
 
-if v:version < '702'
-    call add(g:pathogen_disabled, 'fuzzyfinder')
-    call add(g:pathogen_disabled, 'l9')
+"if v:version < '702'
+    "call add(g:pathogen_disabled, 'fuzzyfinder')
+    "call add(g:pathogen_disabled, 'l9')
     call add(g:pathogen_disabled, 'clang-complete')
-endif
+"endif
 call pathogen#infect()
 syntax on
 set nocompatible
@@ -16,6 +16,7 @@ set noswapfile
 set title
 set nowrap
 set tabstop=4
+set expandtab
 set shiftwidth=4
 set shiftround
 set autoindent
@@ -33,6 +34,11 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 filetype plugin indent on
+nmap <F8> :TagbarToggle<CR>
+nmap <F9> :FufFile<CR>
+
+set laststatus=2
+
 "let g:clang_snippets = 1
 "let g:clang_snippets_engine = 'clang_complete'
 
