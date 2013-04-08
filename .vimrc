@@ -11,7 +11,8 @@ syntax on
 set nocompatible
 set nobackup
 set nowritebackup
-set noswapfile
+"set noswapfile
+set directory^=$HOME/tmp
 
 set title
 set nowrap
@@ -62,3 +63,9 @@ function! AutoHighlightToggle()
     return 1
   endif
 endfunction
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
