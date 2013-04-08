@@ -5,6 +5,7 @@ let g:pathogen_disabled = []
     "call add(g:pathogen_disabled, 'fuzzyfinder')
     "call add(g:pathogen_disabled, 'l9')
     call add(g:pathogen_disabled, 'clang-complete')
+    call add(g:pathogen_disabled, 'powerline')
 "endif
 call pathogen#infect()
 syntax on
