@@ -2,8 +2,8 @@
 let g:pathogen_disabled = []
 
 "if v:version < '702'
-    "call add(g:pathogen_disabled, 'fuzzyfinder')
-    "call add(g:pathogen_disabled, 'l9')
+    call add(g:pathogen_disabled, 'fuzzyfinder')
+    call add(g:pathogen_disabled, 'l9')
     call add(g:pathogen_disabled, 'clang-complete')
     call add(g:pathogen_disabled, 'powerline')
 "endif
@@ -13,7 +13,7 @@ set nocompatible
 set nobackup
 set nowritebackup
 "set noswapfile
-set directory^=$HOME/tmp
+set directory^=$HOME/tmp//
 
 set title
 set nowrap
@@ -70,3 +70,6 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+set bg=dark
+set colorcolumn=80
