@@ -1,6 +1,10 @@
+
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
+(require 'whitespace)
+(global-whitespace-mode t)
+(setq whitespace-global-modes '(c-mode c++-mode))
+(setq whitespace-style '(face tabs lines-tail trailing))
 (defun toggle-window-split ()
   (interactive)
   (if (= (count-windows) 2)
@@ -40,5 +44,25 @@
 (recentf-mode 1) ; keep a list of recently opened files
 
 
-(setq-default c-basic-offset 4)
+
 (setq-default  indent-tabs)
+
+
+ (c-add-style "mine"
+              '("linux"
+		(c-basic-offset . 4)
+                (c-offsets-alist
+                 (innamespace . -)
+                 (inline-open . 0)
+                 (inher-cont . c-lineup-multi-inher)
+                 (arglist-cont-nonempty . +)
+                 (template-args-cont . +))))
+
+
+
+(setq c-default-style
+      '((java-mode . "java")
+	(awk-mode . "awk")
+	(other . "mine")))
+
+(setq comment-style 'multi-line)
