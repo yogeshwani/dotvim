@@ -1,3 +1,4 @@
+(set-face-attribute 'default nil :height 90)
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
@@ -66,3 +67,36 @@
         (other . "mine")))
 
 (setq comment-style 'multi-line)
+
+
+;; setup files ending in “.js” to open in js2-mode
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
+
+(server-start)
+
+;; [Facultative] Only if you have installed async.
+(add-to-list 'load-path "~/.emacs.d/emacs-async")
+
+(add-to-list 'load-path "~/.emacs.d/helm")
+
+(require 'helm-config)
+
+(add-to-list 'load-path "~/.emacs.d")
+(autoload 'turn-on-ctags-auto-update-mode "ctags-update" "turn on 'ctags-auto-update-mode'." t)
+(add-hook 'c-mode-common-hook  'turn-on-ctags-auto-update-mode)
+(add-hook 'emacs-lisp-mode-hook  'turn-on-ctags-auto-update-mode)
+
+(autoload 'ctags-update "ctags-update" "update TAGS using ctags" t)
+(global-set-key (kbd "C-c e") 'ctags-update)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(helm-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+(global-set-key (kbd "C-x b") 'helm-mini)
+
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
