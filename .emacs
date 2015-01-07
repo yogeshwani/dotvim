@@ -1,10 +1,14 @@
+(set-face-attribute 'default nil :height 90)
 
+; disable toolbar and menubar
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
 (require 'whitespace)
 (global-whitespace-mode t)
 (setq whitespace-global-modes '(c-mode c++-mode))
 (setq whitespace-style '(face tabs lines-tail trailing))
+
 (defun toggle-window-split ()
   (interactive)
   (if (= (count-windows) 2)
@@ -43,9 +47,7 @@
 (setq auto-save-default nil) ; stop creating #autosave# files
 (recentf-mode 1) ; keep a list of recently opened files
 
-
-
-(setq-default  indent-tabs)
+;(setq-default  indent-tabs)
 
 
  (c-add-style "mine"
@@ -66,3 +68,17 @@
 	(other . "mine")))
 
 (setq comment-style 'multi-line)
+
+(defun insert-file-name ()
+    "Insert the full path file name into the current buffer."
+      (interactive)
+        (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+
+
+
+(global-set-key (kbd "C-i") buffer-file-name)
+
+
+(setq column-number-mode t)
+
+(global-set-key (kbd "TAB") 'self-insert-command)
