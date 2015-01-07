@@ -43,3 +43,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar
+[submodule "emacs/.emacs.d/helm"]
+	path = emacs/.emacs.d/helm
+	url = http://github.com/emacs-helm/helm
