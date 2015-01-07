@@ -46,3 +46,6 @@
 [submodule "emacs/.emacs.d/helm"]
 	path = emacs/.emacs.d/helm
 	url = http://github.com/emacs-helm/helm
+[submodule "emacs/.emacs.d/helm-etags-plus"]
+	path = emacs/.emacs.d/helm-etags-plus
+	url = https://github.com/jixiuf/helm-etags-plus
