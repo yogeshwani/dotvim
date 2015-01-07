@@ -100,3 +100,19 @@
 
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/ample-zen")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("a81bc918eceaee124247648fc9682caddd713897d7fd1398856a5b61a592cb62" "6f139538f6f0838e04f53804f11a63ebaac743c660d15a3cbdb992097a44bef4" "e890fd7b5137356ef5b88be1350acf94af90d9d6dd5c234978cd59a6b873ea94" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-boron-theme")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/amelie-theme")
