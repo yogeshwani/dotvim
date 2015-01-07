@@ -43,3 +43,18 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar
+[submodule "emacs/.emacs.d/helm"]
+	path = emacs/.emacs.d/helm
+	url = http://github.com/emacs-helm/helm
+[submodule "emacs/.emacs.d/helm-etags-plus"]
+	path = emacs/.emacs.d/helm-etags-plus
+	url = https://github.com/jixiuf/helm-etags-plus
+[submodule "emacs/.emacs.d/themes/ample-zen"]
+	path = emacs/.emacs.d/themes/ample-zen
+	url = https://github.com/mjwall/ample-zen
+[submodule "emacs/.emacs.d/themes/emacs-boron-theme"]
+	path = emacs/.emacs.d/themes/emacs-boron-theme
+	url = https://github.com/emacsfodder/emacs-boron-theme
+[submodule "emacs/.emacs.d/themes/amelie-theme"]
+	path = emacs/.emacs.d/themes/amelie-theme
+	url = https://github.com/ranmocy/amelie-theme
