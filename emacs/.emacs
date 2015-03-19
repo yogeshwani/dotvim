@@ -61,13 +61,17 @@
             (set-fill-column 80)))
 
 ; Setup TAB to simply insert a TAB char
-(global-set-key (kbd "TAB") 'self-insert-command)
+;(global-set-key (kbd "TAB") 'self-insert-command)
 
 ; When indenting insert spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
 ; Set the style to use for comment-region
 (setq comment-style 'multi-line)
+
+; ediff in vertical
+(setq ediff-split-window-function 'split-window-horizontally)
+
 
 ;; Setup c-mode stuff
 ; Configure c-mode default style

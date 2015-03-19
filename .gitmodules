@@ -58,3 +58,6 @@
 [submodule "emacs/.emacs.d/themes/amelie-theme"]
 	path = emacs/.emacs.d/themes/amelie-theme
 	url = https://github.com/ranmocy/amelie-theme
+[submodule "emacs/.emacs.d/xcscope.el"]
+	path = emacs/.emacs.d/xcscope.el
+	url = http://github.com/dkogan/xcscope.el.git
