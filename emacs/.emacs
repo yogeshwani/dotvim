@@ -128,3 +128,6 @@
 (setq org-log-done t)
 
 (setq org-support-shift-select t)
+
+(require 'epa-file)
+(epa-file-enable)
