@@ -144,6 +144,8 @@
 ; Enable selecting text with shift
 (setq org-support-shift-select t)
 
+(require 'epa-file)
+(epa-file-enable)
 
 ;; UI stuff
 ; Set default font to 9 pt
