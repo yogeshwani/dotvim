@@ -98,7 +98,7 @@
 ; Set C/C++ modes to highlight trailing spaces and tabs
 (require 'whitespace)
 (global-whitespace-mode t)
-(setq whitespace-global-modes '(c-mode c++-mode))
+(setq whitespace-global-modes '(c-mode c++-mode python-mode))
 (setq whitespace-style '(face tabs lines-tail trailing))
 
 
@@ -130,6 +130,10 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
+;; xcscope minor mode setup
+(add-to-list 'load-path "~/.emacs.d/xcscope.el")
+(require 'xcscope)
+(cscope-setup)
 
 ;; Org mode setup
 (require 'org)
@@ -160,3 +164,6 @@
 (custom-set-variables
  '(custom-safe-themes (quote ("a81bc918eceaee124247648fc9682caddd713897d7fd1398856a5b61a592cb62" "6f139538f6f0838e04f53804f11a63ebaac743c660d15a3cbdb992097a44bef4" "e890fd7b5137356ef5b88be1350acf94af90d9d6dd5c234978cd59a6b873ea94" default)))
  '(safe-local-variable-values (quote ((gud-gdb-command-name . "arm-none-eabi-gdb -i=mi --annotate=3")))))
+
+
+(setq cscope-search-list (list '("builds/mac/mac_condord01_wlanlite_hardmac_ram_sdio_gcc" . nil)))
