@@ -72,6 +72,18 @@
 ; ediff in vertical
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; Setup package.el
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+; For important compatibility libraries like cl-lib
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+;; Setup line-mode stuff
+; Without this it shows ?? in files with long lines
+(setq line-number-display-limit-width 2000000)
 
 ;; Setup c-mode stuff
 ; Configure c-mode default style
@@ -92,7 +104,6 @@
 
 ; Setup files ending in “.ino” to open in c-mode
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c-mode))
-
 
 ;; Setup whitespace mode
 ; Set C/C++ modes to highlight trailing spaces and tabs
@@ -134,6 +145,7 @@
 (add-to-list 'load-path "~/.emacs.d/xcscope.el")
 (require 'xcscope)
 (cscope-setup)
+(setq cscope-use-relative-paths t)
 
 ;; Org mode setup
 (require 'org)
@@ -146,6 +158,14 @@
 
 (require 'epa-file)
 (epa-file-enable)
+
+;; Setup projectile mode
+(add-to-list 'load-path "~/.emacs.d/dash")
+(add-to-list 'load-path "~/.emacs.d/projectile")
+;(add-hook 'after-init-hook #'projectile-global-mode)
+(require 'dash)
+(require 'projectile)
+(projectile-global-mode)
 
 ;; UI stuff
 ; Set default font to 9 pt

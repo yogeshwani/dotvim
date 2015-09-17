@@ -61,3 +61,9 @@
 [submodule "emacs/.emacs.d/xcscope.el"]
 	path = emacs/.emacs.d/xcscope.el
 	url = http://github.com/dkogan/xcscope.el.git
+[submodule "emacs/.emacs.d/projectile"]
+	path = emacs/.emacs.d/projectile
+	url = https://github.com/bbatsov/projectile.git
+[submodule "emacs/.emacs.d/dash"]
+	path = emacs/.emacs.d/dash
+	url = https://github.com/magnars/dash.el
