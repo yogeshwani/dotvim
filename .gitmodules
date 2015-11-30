@@ -67,3 +67,6 @@
 [submodule "emacs/.emacs.d/dash"]
 	path = emacs/.emacs.d/dash
 	url = https://github.com/magnars/dash.el
+[submodule "emacs/.emacs.d/magit"]
+	path = emacs/.emacs.d/magit
+	url = https://github.com/magit/magit.git

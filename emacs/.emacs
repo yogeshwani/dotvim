@@ -167,6 +167,18 @@
 (require 'projectile)
 (projectile-global-mode)
 
+;; Setup Magit
+(add-to-list 'load-path "~/.emacs.d/magit/lisp")
+(require 'magit)
+
+(with-eval-after-load 'info
+  (info-initialize)
+  (add-to-list 'Info-directory-list
+               "~/.emacs.d/magit/Documentation/"))
+
+(global-set-key (kbd "C-x G") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
 ;; UI stuff
 ; Set default font to 9 pt
 (set-face-attribute 'default nil :height 90)
