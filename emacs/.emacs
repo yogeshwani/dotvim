@@ -176,8 +176,15 @@
   (add-to-list 'Info-directory-list
                "~/.emacs.d/magit/Documentation/"))
 
-(global-set-key (kbd "C-x G") 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
+
+;; Setup highlight-symbol mode
+(add-to-list 'load-path "~/.emacs.d/highlight-symbol.el")
+(require 'highlight-symbol)
+(add-hook 'c-mode-common-hook  'highlight-symbol-mode)
+
 
 ;; UI stuff
 ; Set default font to 9 pt
